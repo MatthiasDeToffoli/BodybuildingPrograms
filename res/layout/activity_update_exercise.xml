@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_update_exercise"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fr.matthiasdetoffoli.bodybuildingprograms.Activities.Secondary.UpdateExerciseActivity">
+
+    <Button
+        android:id="@+id/deleteExercise"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="left"
+        android:text="@string/remove_text"
+        tools:ignore="RtlHardcoded" />
+
+    <EditText
+        android:id="@+id/ExerciseName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/deleteExercise"
+        android:layout_marginTop="5dp"
+        android:autofillHints="@string/Name_default_value"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/Name_default_value"
+        tools:ignore="LabelFor" />
+
+    <LinearLayout
+        android:id="@+id/SeriesListHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ExerciseName"
+        android:layout_marginEnd="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/RepTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/rep_text"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/WeightTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/weight_text"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/RestTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/rest_text"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/SeriesListHeader">
+
+        <LinearLayout
+            android:id="@+id/Series"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/NewExerciseButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/add_text" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="UselessLeaf" />
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>
